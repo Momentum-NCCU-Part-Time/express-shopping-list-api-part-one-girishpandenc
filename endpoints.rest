@@ -1,14 +1,44 @@
+###get all
 GET http://localhost:3000/shoppinglists
 
-###
+### new list
 POST http://localhost:3000/shoppinglists
 Content-Type: application/json
 
 {
-    "title": "title?",
-    "createdAt": "dayjs().unix()",
-    "updatedAt": "2024-01-04T23:03:10.635Z"
+    "title": "Harris Teeter"
 }
 
-###
-get http://localhost:3000/shoppinglists/id
+### get individual
+get http://localhost:3000/shoppinglists/65c54a6f91cf9e8ac56c9ea0
+
+### new list
+PATCH http://localhost:3000/shoppinglists/65c583aafd9d5c4f541452c8
+Content-Type: application/json
+
+{
+        "title": "Safeway3"
+}
+
+### delete
+DELETE http://localhost:3000/shoppinglists/65c58207776430c36442061a
+
+### Post item
+POST http://localhost:3000/shoppinglists/65cbc1a392e6d2ba5bbee3d1/items
+Content-Type: application/json
+
+{"items": 
+{"name":"Yogurt",
+"quantity": "1",
+"purchased": true}
+}
+
+### patch items:id/items
+PATCH http://localhost:3000/shoppinglists/65cbc1a392e6d2ba5bbee3d1/items
+Content-Type: application/json
+
+{"items": 
+{"name":"Milk",
+"quantity": "2",
+"purchased": true}
+}
