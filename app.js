@@ -2,6 +2,7 @@ require("dotenv").config()
 const express = require("express")
 const morgan = require("morgan")
 const dayjs = require("dayjs")
+const cors = require('cors')
 //import dayjs from 'dayjs' // ES 2015
 dayjs().format()
 //port
@@ -19,6 +20,7 @@ db.once("open", () => console.log("connected to mongoDB"));
 const app = express()
 app.use(morgan('dev'))
 app.use(express.json())
+app.use(cors())
 
 //endpoints
 //GET all

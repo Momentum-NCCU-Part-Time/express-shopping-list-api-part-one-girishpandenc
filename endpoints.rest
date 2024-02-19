@@ -1,7 +1,7 @@
-###get all
+###get all shopping lista
 GET http://localhost:3000/shoppinglists
 
-### new list
+### create new shopping list
 POST http://localhost:3000/shoppinglists
 Content-Type: application/json
 
@@ -9,10 +9,10 @@ Content-Type: application/json
     "title": "Harris Teeter"
 }
 
-### get individual
+### get individual shopping list
 get http://localhost:3000/shoppinglists/65c54a6f91cf9e8ac56c9ea0
 
-### new list
+### update existing list
 PATCH http://localhost:3000/shoppinglists/65c583aafd9d5c4f541452c8
 Content-Type: application/json
 
@@ -20,10 +20,10 @@ Content-Type: application/json
         "title": "Safeway3"
 }
 
-### delete
+### delete shopping list
 DELETE http://localhost:3000/shoppinglists/65c58207776430c36442061a
 
-### Post item
+### Post item to shopping list
 POST http://localhost:3000/shoppinglists/65cbc1a392e6d2ba5bbee3d1/items
 Content-Type: application/json
 
@@ -33,12 +33,6 @@ Content-Type: application/json
 "purchased": true}
 }
 
-### patch items:id/items
-PATCH http://localhost:3000/shoppinglists/65cbc1a392e6d2ba5bbee3d1/items
-Content-Type: application/json
+### get individual item from shopping list
 
-{"items": 
-{"name":"Milk",
-"quantity": "2",
-"purchased": true}
-}
+
